@@ -1,0 +1,41 @@
+algoritmo "matriz7...4"
+  // Função: Escrever um algoritmo para ler uma matriz (7,4) contendo valores inteiros
+//(supor que os valores são distintos). Após, encontrar o menor valor contido
+//na matriz e sua posição.
+// Autor :TH
+// Data :  10/10
+// Seção de Declarações
+
+var
+
+a:vetor[1..7,1..4] de inteiro
+menor, pos1,pos2, x, y:inteiro
+media:real
+
+inicio
+
+para x de 1 ate 7 faca
+   para y de 1 ate 4 faca
+      escreval ("Digite um valor")
+      leia (a[x,y])
+   fimpara
+fimpara
+
+menor <- a[1,1]
+pos1 <- 1
+pos2 <- 1
+
+para x de 1 ate 7 faca
+   para y de 1 ate 4 faca
+      se menor > a[x,y] entao
+         menor <- a[x,y]
+         pos1 <- x
+         pos2 <- y
+      fimse
+   fimpara
+fimpara
+
+escreval ("")
+escreval ("O menor número é: ", menor, " que esta na posição: [", pos1, ",", pos2,"]")
+
+fimalgoritmo
